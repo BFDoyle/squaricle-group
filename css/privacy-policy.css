@@ -1,0 +1,38 @@
+/* Page styles for privacy-policy.html */
+body{margin:0;font-family:'Montserrat',system-ui,sans-serif}
+*{box-sizing:border-box}
+a:focus-visible,button:focus-visible{outline:3px solid #1b2a24;outline-offset:3px}
+.dk a:focus-visible,.dk button:focus-visible{outline-color:#efa897}
+.wrap{max-width:1440px;margin:0 auto;padding:0 48px}
+.h2{margin:0;font-weight:800;font-size:clamp(28px,3vw,40px);line-height:1.08;letter-spacing:-0.025em;color:#283d35}
+.p{margin:0;font-size:18px;line-height:1.7;color:#1b2a24}
+.p a,.li a{color:#1b2a24;font-weight:700}
+.doc section{margin-top:72px}
+.doc section > *+*{margin-top:20px}
+.doc ul{margin:0;padding-left:26px;display:flex;flex-direction:column;gap:8px}
+.doc li{font-size:18px;line-height:1.65;color:#1b2a24}
+.nav a{color:#ffffff;text-decoration:none;font-weight:600;font-size:16px}
+.nav a:hover{color:#efa897}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-family:inherit;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;border-radius:0}
+.btn-s{background:#efa897;color:#1b2a24}
+.fl a{color:#ffffff;text-decoration:none;font-size:16px;line-height:2}
+.fl a:hover{color:#efa897}
+.side{position:sticky;top:24px}
+.side a{display:block;padding:12px 18px;font-size:16px;font-weight:600;color:#1b2a24;text-decoration:none;background:#eef2ef;margin-bottom:6px}
+.side a:hover{background:#fcb040}
+.side a[aria-current="page"]{background:#283d35;color:#ffffff;font-weight:700}
+.side b{display:block;margin:24px 0 10px;font-size:15px;color:#283d35}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{text-align:left;font-size:16px;font-weight:700;color:#ffffff;background:#283d35;padding:16px 20px}
+td{vertical-align:top;font-size:16px;line-height:1.6;color:#1b2a24;padding:20px;background:#eef2ef}
+tr:nth-child(even) td{background:#f7f9f7}
+td p{margin:0 0 10px}
+td p:last-child{margin:0}
+@media(max-width:900px){
+.wrap{padding:0 20px}
+.two{grid-template-columns:1fr !important}
+.three{grid-template-columns:1fr !important}
+.side{position:static}
+.nav{display:none !important}
+}

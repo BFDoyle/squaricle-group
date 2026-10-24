@@ -1,0 +1,45 @@
+# Squaricle Group – Apache settings (works on Cloudways)
+
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Old WordPress addresses -> new pages (permanent redirects)
+RewriteRule ^corporate-policy/?$ /group-policies.html [R=301,L]
+RewriteRule ^site-notice/?$ /privacy-policy.html [R=301,L]
+RewriteRule ^cookie-policy/?$ /cookie-policy.html [R=301,L]
+RewriteRule ^our-team/?$ /our-team.html [R=301,L]
+RewriteRule ^leadership-team/?$ /our-team.html#leadership [R=301,NE,L]
+RewriteRule ^squaricle-group-values/?$ /our-values.html [R=301,L]
+RewriteRule ^diversity-and-inclusion/?$ /diversity-and-inclusion.html [R=301,L]
+RewriteRule ^people-policy/?$ /people-policy.html [R=301,L]
+RewriteRule ^corporate-social-responsibility/?$ /corporate-social-responsibility.html [R=301,L]
+RewriteRule ^careers-with-ted-learning-group/?$ /careers.html [R=301,L]
+RewriteRule ^emerging-u/?$ /emerging-u.html [R=301,L]
+RewriteRule ^ted-learning/?$ /ted-learning.html [R=301,L]
+RewriteRule ^talk-to-the-squaricle-group/?$ /index.html#contact [R=301,NE,L]
+
+# Clean addresses: /careers works as well as /careers.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+</IfModule>
+
+# Caching
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType video/mp4 "access plus 1 month"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml
+</IfModule>
