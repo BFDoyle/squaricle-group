@@ -103,8 +103,9 @@
   }
 
   /* Forms.
-     Set data-endpoint="https://..." on a <form> (for example a Formspree or Netlify endpoint)
-     and it posts there with fetch. Without an endpoint it shows a notice and sends nothing. */
+     Every form posts to submit.php, which checks it, sends it to the webhook and answers with JSON.
+     On success the visitor goes to the thank-you page; on a problem the message shows above the button
+     and what they typed is kept. Without JavaScript the form is a normal post and submit.php redirects. */
   document.querySelectorAll('form[data-form]').forEach(function (form) {
     var status = document.createElement('p');
     status.className = 'form-status';
@@ -119,30 +120,28 @@
     };
 
     form.addEventListener('submit', function (e) {
+      if (!window.fetch || !window.FormData) { return; }
       e.preventDefault();
-      var consent = form.querySelector('input[type="checkbox"]');
-      if (consent && !consent.checked) {
-        show('Please tick the consent box so we can get in touch.', true);
-        consent.focus();
-        return;
-      }
-      var endpoint = form.getAttribute('data-endpoint');
-      if (!endpoint) {
-        show('This form is not connected yet, so nothing has been sent. See the README to connect a form service.', true);
-        return;
-      }
+      if (!form.reportValidity()) { return; }
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; }
-      fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      show('Sending…', false);
+      fetch(form.getAttribute('action'), { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (r) {
-          if (!r.ok) { throw new Error('Request failed'); }
-          form.reset();
-          show('Thank you. We have received your message and will be in touch.', false);
+          return r.json().then(function (j) { return j; }, function () { return { ok: false }; });
+        })
+        .then(function (j) {
+          if (j.ok && j.redirect) {
+            window.location.href = j.redirect;
+            return;
+          }
+          show(j.error || 'Sorry, something went wrong. Please email hello@squariclegroup.com instead.', true);
+          if (btn) { btn.disabled = false; }
         })
         .catch(function () {
           show('Sorry, something went wrong. Please email hello@squariclegroup.com instead.', true);
-        })
-        .then(function () { if (btn) { btn.disabled = false; } });
+          if (btn) { btn.disabled = false; }
+        });
     });
   });
 })();

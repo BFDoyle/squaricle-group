@@ -1,0 +1,203 @@
+{
+  "contact": {
+    "label": "Home page contact form",
+    "page": "index.php",
+    "anchor": "contact",
+    "fields": [
+      {
+        "name": "first_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "last_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "max": 40
+      },
+      {
+        "name": "position",
+        "type": "text",
+        "max": 150
+      },
+      {
+        "name": "organisation",
+        "type": "text",
+        "max": 200
+      },
+      {
+        "name": "message",
+        "type": "textarea",
+        "max": 3000
+      },
+      {
+        "name": "consent",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "thanks": {
+      "heading": "thank you",
+      "lead": "Thanks for getting in touch.",
+      "body": "A member of the Squaricle Group team will be in contact shortly."
+    }
+  },
+  "callback": {
+    "label": "Our team page call-back form",
+    "page": "our-team.php",
+    "anchor": "contact",
+    "fields": [
+      {
+        "name": "first_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "last_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "required": true,
+        "max": 40
+      }
+    ],
+    "implied_consent": "Submitting the form was taken as consent to be contacted about the enquiry",
+    "thanks": {
+      "heading": "thank you",
+      "lead": "We have your details.",
+      "body": "A member of the team will call you back as soon as they can."
+    }
+  },
+  "ted-guide": {
+    "label": "ted Learning guide request",
+    "page": "ted-learning.php",
+    "anchor": "contact",
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "consent",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "thanks": {
+      "heading": "thank you",
+      "lead": "We have your request for the ted Learning guide.",
+      "body": "A member of the ted Learning team will be in touch."
+    }
+  },
+  "emerging-u-brochure": {
+    "label": "emerging-u brochure request",
+    "page": "emerging-u.php",
+    "anchor": "brochure",
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "consent",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "thanks": {
+      "heading": "thank you",
+      "lead": "We have your request for the emerging-u brochure.",
+      "body": "A member of the team will be in touch."
+    }
+  },
+  "careers": {
+    "label": "Careers application",
+    "page": "careers.php",
+    "anchor": "apply",
+    "fields": [
+      {
+        "name": "first_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "last_name",
+        "type": "text",
+        "required": true,
+        "max": 100
+      },
+      {
+        "name": "email",
+        "type": "email",
+        "required": true,
+        "max": 200
+      },
+      {
+        "name": "phone",
+        "type": "tel",
+        "max": 40
+      },
+      {
+        "name": "cv",
+        "type": "file",
+        "required": true,
+        "ext": [
+          "pdf",
+          "doc",
+          "docx"
+        ],
+        "max_mb": 5
+      },
+      {
+        "name": "consent",
+        "type": "checkbox",
+        "required": true
+      }
+    ],
+    "thanks": {
+      "heading": "thank you",
+      "lead": "We have your application.",
+      "body": "Thank you for your interest in joining the team. If your experience matches a role we will be in touch."
+    }
+  }
+}

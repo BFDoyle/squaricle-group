@@ -1,3 +1,6 @@
 .DS_Store
 Thumbs.db
 node_modules/
+storage/failed/
+storage/cv/
+*.zip

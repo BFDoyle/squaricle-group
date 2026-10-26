@@ -239,3 +239,6 @@ header { position: relative; z-index: 30; }
   .logo-track { animation: none; }
   .logo-track img[aria-hidden="true"] { display: none; }
 }
+
+/* Spam trap field inside every form: off screen, never seen or tabbed to by people */
+.hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }

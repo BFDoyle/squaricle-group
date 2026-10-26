@@ -1,0 +1,26 @@
+/* Page styles for thank-you.php */
+body{margin:0;font-family:'Montserrat',system-ui,sans-serif}
+*{box-sizing:border-box}
+a:focus-visible,button:focus-visible{outline:3px solid #1b2a24;outline-offset:3px}
+.dk a:focus-visible,.dk button:focus-visible{outline-color:#efa897}
+.wrap{max-width:1440px;margin:0 auto;padding:0 48px}
+.h2{margin:0;font-weight:800;font-size:clamp(32px,3.6vw,52px);line-height:1.04;letter-spacing:-0.025em;color:#283d35}
+.nav a{color:#ffffff;text-decoration:none;font-weight:600;font-size:16px}
+.nav a:hover{color:#efa897}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-family:inherit;font-size:16px;font-weight:700;text-decoration:none;border:0;cursor:pointer;border-radius:0}
+.btn-s{background:#efa897;color:#1b2a24}
+.btn-i{background:#1b2a24;color:#ffffff}
+.btn-i:hover{background:#283d35}
+.fl a{color:#ffffff;text-decoration:none;font-size:16px;line-height:2}
+.fl a:hover{color:#efa897}
+.row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 40px;background:#eef2ef}
+.row:hover{background:#fcb040}
+.row .t{margin:0;font-weight:700;font-size:clamp(22px,2.4vw,32px);letter-spacing:-0.02em;color:#1b2a24}
+.row .go{font-weight:700;font-size:16px;color:#1b2a24;white-space:nowrap}
+@media(max-width:900px){
+.wrap{padding:0 20px}
+.two{grid-template-columns:1fr !important}
+.three{grid-template-columns:1fr !important}
+.row{padding:24px 20px}
+.nav{display:none !important}
+}

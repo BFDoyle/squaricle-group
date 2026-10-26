@@ -1,31 +1,46 @@
 # Squaricle Group – Apache settings (works on Cloudways)
 
 Options -Indexes
-ErrorDocument 404 /404.html
+DirectoryIndex index.php
+ErrorDocument 404 /404.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
 # Old WordPress addresses -> new pages (permanent redirects)
-RewriteRule ^corporate-policy/?$ /group-policies.html [R=301,L]
-RewriteRule ^site-notice/?$ /privacy-policy.html [R=301,L]
-RewriteRule ^cookie-policy/?$ /cookie-policy.html [R=301,L]
-RewriteRule ^our-team/?$ /our-team.html [R=301,L]
-RewriteRule ^leadership-team/?$ /our-team.html#leadership [R=301,NE,L]
-RewriteRule ^squaricle-group-values/?$ /our-values.html [R=301,L]
-RewriteRule ^diversity-and-inclusion/?$ /diversity-and-inclusion.html [R=301,L]
-RewriteRule ^people-policy/?$ /people-policy.html [R=301,L]
-RewriteRule ^corporate-social-responsibility/?$ /corporate-social-responsibility.html [R=301,L]
-RewriteRule ^careers-with-ted-learning-group/?$ /careers.html [R=301,L]
-RewriteRule ^emerging-u/?$ /emerging-u.html [R=301,L]
-RewriteRule ^ted-learning/?$ /ted-learning.html [R=301,L]
-RewriteRule ^talk-to-the-squaricle-group/?$ /index.html#contact [R=301,NE,L]
+RewriteRule ^corporate-policy/?$ /group-policies.php [R=301,L]
+RewriteRule ^site-notice/?$ /privacy-policy.php [R=301,L]
+RewriteRule ^cookie-policy/?$ /cookie-policy.php [R=301,L]
+RewriteRule ^our-team/?$ /our-team.php [R=301,L]
+RewriteRule ^leadership-team/?$ /our-team.php#leadership [R=301,NE,L]
+RewriteRule ^squaricle-group-values/?$ /our-values.php [R=301,L]
+RewriteRule ^diversity-and-inclusion/?$ /diversity-and-inclusion.php [R=301,L]
+RewriteRule ^people-policy/?$ /people-policy.php [R=301,L]
+RewriteRule ^corporate-social-responsibility/?$ /corporate-social-responsibility.php [R=301,L]
+RewriteRule ^careers-with-ted-learning-group/?$ /careers.php [R=301,L]
+RewriteRule ^emerging-u/?$ /emerging-u.php [R=301,L]
+RewriteRule ^ted-learning/?$ /ted-learning.php [R=301,L]
+RewriteRule ^talk-to-the-squaricle-group/?$ /index.php#contact [R=301,NE,L]
 
-# Clean addresses: /careers works as well as /careers.html
+# The first test build used .html addresses: send them to the matching .php page
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^([a-z0-9-]+)\.html$ /$1.php [R=301,L]
+
+# Folders that are only for the site's own code, data and saved form copies
+RewriteRule ^(inc|config|data|storage)(/|$) - [F,L]
+
+# Clean addresses: /careers works as well as /careers.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^/]+)/?$ $1.html [L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+</IfModule>
+
+# Basic security headers
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # Caching

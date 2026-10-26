@@ -1,0 +1,146 @@
+{
+  "name": "Squaricle Group",
+  "domain": "www.squariclegroup.com",
+  "email": "hello@squariclegroup.com",
+  "nav": [
+    {
+      "key": "home",
+      "label": "Home",
+      "href": "index.php"
+    },
+    {
+      "key": "brands",
+      "label": "Businesses and partners",
+      "href": "index.php#brands",
+      "children": [
+        {
+          "label": "ted Learning",
+          "href": "ted-learning.php"
+        },
+        {
+          "label": "ted HuB",
+          "href": "https://hub.tedlearning.co.uk",
+          "external": true
+        },
+        {
+          "label": "emerging-u",
+          "href": "emerging-u.php"
+        },
+        {
+          "label": "CurioTraining",
+          "href": "https://www.curiotraining.com",
+          "external": true
+        }
+      ]
+    },
+    {
+      "key": "people",
+      "label": "Our people",
+      "href": "our-team.php",
+      "children": [
+        {
+          "label": "Leadership",
+          "href": "our-team.php#leadership"
+        },
+        {
+          "label": "Our team",
+          "href": "our-team.php"
+        }
+      ]
+    },
+    {
+      "key": "values",
+      "label": "Our values",
+      "href": "our-values.php",
+      "children": [
+        {
+          "label": "Our values & mission",
+          "href": "our-values.php"
+        },
+        {
+          "label": "Diversity & inclusion",
+          "href": "diversity-and-inclusion.php"
+        },
+        {
+          "label": "People policy",
+          "href": "people-policy.php"
+        },
+        {
+          "label": "Corporate social responsibility",
+          "href": "corporate-social-responsibility.php"
+        }
+      ]
+    },
+    {
+      "key": "careers",
+      "label": "Careers",
+      "href": "careers.php"
+    }
+  ],
+  "cta": {
+    "label": "Talk to us",
+    "href": "index.php#contact"
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Our group",
+        "links": [
+          {
+            "label": "Squaricle Group",
+            "href": "index.php"
+          },
+          {
+            "label": "ted Learning",
+            "href": "ted-learning.php"
+          },
+          {
+            "label": "emerging-u",
+            "href": "emerging-u.php"
+          },
+          {
+            "label": "ted HuB",
+            "href": "https://hub.tedlearning.co.uk"
+          },
+          {
+            "label": "CurioTraining",
+            "href": "https://www.curiotraining.com"
+          }
+        ]
+      },
+      {
+        "title": "Policies",
+        "links": [
+          {
+            "label": "Group policies",
+            "href": "group-policies.php"
+          },
+          {
+            "label": "Privacy policy",
+            "href": "privacy-policy.php"
+          },
+          {
+            "label": "Cookie policy",
+            "href": "cookie-policy.php"
+          },
+          {
+            "label": "Cookie settings",
+            "href": "cookie-policy.php#consent",
+            "consent_open": true
+          }
+        ]
+      }
+    ],
+    "registered_office": {
+      "title": "Registered office",
+      "lines": [
+        "Squaricle Group Limited",
+        "First Floor, 85 Great Portland Street",
+        "London, W1W 7LT",
+        "Company number 12647309"
+      ]
+    },
+    "copyright": "© Squaricle Group Limited",
+    "notice": "ted Learning Limited is not affiliated with or endorsed by TED Conferences LLC, TED Talks, TEDx, or TED-Ed. Any references to ‘ted’ on this website refer solely to ted Learning Limited, a separate and independent UK-based organisation specialising in drama-based learning & workplace training."
+  }
+}

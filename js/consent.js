@@ -130,7 +130,7 @@
     banner.innerHTML =
       '<div class="sg-banner-text">' +
       '<p class="sg-banner-title">We use cookies</p>' +
-      '<p>We use cookies to make this site work. With your permission we would also like to use cookies for preferences, statistics and marketing. You can change or withdraw your consent at any time. See our <a href="cookie-policy.html">cookie policy</a>.</p>' +
+      '<p>We use cookies to make this site work. With your permission we would also like to use cookies for preferences, statistics and marketing. You can change or withdraw your consent at any time. See our <a href="cookie-policy.php">cookie policy</a>.</p>' +
       '</div>' +
       '<div class="sg-banner-actions">' +
       '<button type="button" class="sg-btn sg-btn-accept" data-act="accept">Accept all</button>' +

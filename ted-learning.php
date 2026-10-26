@@ -1,46 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ted Learning | Squaricle Group</title>
-<meta name="description" content="ted Learning has delivered dramatically different, engaging and fun theatre based learning since 2012, in the classroom and as blended learning.">
-<meta name="theme-color" content="#283d35">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Squaricle Group">
-<meta property="og:title" content="ted Learning | Squaricle Group">
-<meta property="og:description" content="ted Learning has delivered dramatically different, engaging and fun theatre based learning since 2012, in the classroom and as blended learning.">
-<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<link rel="stylesheet" href="css/consent.css">
-<link rel="stylesheet" href="css/ted-learning.css">
-</head>
-<body>
-<div style="width:100%;background:#ffffff;font-family:'Montserrat',system-ui,sans-serif;color:#1b2a24;overflow:hidden">
-
-<a class="skip" href="#top">Skip to content</a>
-<header class="dk" style="background:#283d35">
-<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:104px">
-<a href="index.html" aria-label="Squaricle Group home" style="display:block;line-height:0"><img src="assets/img/sg-symbol.png" alt="Squaricle Group" style="height:64px;width:64px;display:block"></a>
-<nav class="nav" id="site-nav" aria-label="Main" style="display:flex;align-items:center;gap:36px">
-<a href="index.html">Home</a>
-<div class="has-sub"><a href="index.html#brands" aria-current="true" style="color:#efa897">Businesses and partners</a><ul class="sub" aria-label="Businesses and partners"><li><a href="ted-learning.html" aria-current="page">ted Learning</a></li><li><a href="https://hub.tedlearning.co.uk" target="_blank" rel="noopener">ted HuB</a></li><li><a href="emerging-u.html">emerging-u</a></li><li><a href="https://www.curiotraining.com" target="_blank" rel="noopener">CurioTraining</a></li></ul></div>
-<div class="has-sub"><a href="our-team.html">Our people</a><ul class="sub" aria-label="Our people"><li><a href="our-team.html#leadership">Leadership</a></li><li><a href="our-team.html">Our team</a></li></ul></div>
-<div class="has-sub"><a href="our-values.html">Our values</a><ul class="sub" aria-label="Our values"><li><a href="our-values.html">Our values &amp; mission</a></li><li><a href="diversity-and-inclusion.html">Diversity &amp; inclusion</a></li><li><a href="people-policy.html">People policy</a></li><li><a href="corporate-social-responsibility.html">Corporate social responsibility</a></li></ul></div>
-<a href="careers.html">Careers</a>
-<a href="index.html#contact" class="btn btn-s" style="min-height:44px;padding:0 22px;color:#1b2a24">Talk to us</a>
-</nav>
-<button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-</div>
-</header>
-
-<main id="top">
+<?php
+$page = [
+    'title' => "ted Learning | Squaricle Group",
+    'description' => "ted Learning has delivered dramatically different, engaging and fun theatre based learning since 2012, in the classroom and as blended learning.",
+    'css' => "ted-learning",
+    'nav' => 'brands',
+    'sub' => 'ted-learning.php',
+];
+require __DIR__ . '/inc/header.php';
+?>
 
 <section style="background:#fcb040;padding:40px 0 150px">
 <div class="wrap">
-<p class="crumb" style="margin:0 0 40px;font-size:16px;color:#1b2a24"><a href="index.html#brands">Businesses and partners</a> / ted Learning</p>
+<p class="crumb" style="margin:0 0 40px;font-size:16px;color:#1b2a24"><a href="index.php#brands">Businesses and partners</a> / ted Learning</p>
 <h1 class="h1" style="max-width:1250px">ted Learning is dramatically different</h1>
 <div class="two" style="display:grid;grid-template-columns:5fr 7fr;gap:56px;margin-top:56px;align-items:start">
 <div>
@@ -179,42 +150,15 @@
 <h2 style="margin:0;font-weight:800;font-size:clamp(36px,4vw,60px);line-height:1.02;letter-spacing:-0.03em;color:#1b2a24">Learn more about ted Learning</h2>
 <p style="margin:24px 0 0;font-size:20px;line-height:1.6;color:#1b2a24;max-width:460px">For more information on ted Learning, download our free guide and discover how to boost employee performance.</p>
 </div>
-<form data-form method="post" action="#" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
-<div><label class="lbl" for="tn">Name</label><input class="fld" id="tn" type="text" autocomplete="name" name="tn"></div>
-<div><label class="lbl" for="te">Email</label><input class="fld" id="te" type="email" autocomplete="email" name="te"></div>
-<div style="grid-column:1 / span 2;display:flex;gap:12px;align-items:flex-start"><input id="tc" type="checkbox" style="width:24px;height:24px;margin:0;flex:none" name="tc"><label for="tc" style="font-size:16px;line-height:1.5;color:#1b2a24">I consent to my submitted data being collected and stored.</label></div>
+<form data-form id="guide-form" method="post" action="submit.php" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px">
+<?= form_notice('ted-guide') ?>
+<?= form_fields('ted-guide') ?>
+<div><label class="lbl" for="tn">Name</label><input class="fld" id="tn" type="text" autocomplete="name" name="name" required maxlength="200"></div>
+<div><label class="lbl" for="te">Email</label><input class="fld" id="te" type="email" autocomplete="email" name="email" required maxlength="200"></div>
+<div style="grid-column:1 / span 2;display:flex;gap:12px;align-items:flex-start"><input id="tc" type="checkbox" style="width:24px;height:24px;margin:0;flex:none" name="consent" required><label for="tc" style="font-size:16px;line-height:1.5;color:#1b2a24">I consent to my submitted data being collected and stored.</label></div>
 <div style="grid-column:1 / span 2"><button type="submit" class="btn btn-i">Send message</button></div>
 </form>
 </div>
 </section>
 
-</main>
-
-<footer class="dk" style="background:#283d35;padding:96px 0 48px;color:#ffffff">
-<div class="wrap">
-<p style="margin:0;font-weight:800;font-size:clamp(52px,9.4vw,136px);line-height:0.95;letter-spacing:-0.045em;color:#ffffff">squaricle group</p>
-<div class="three" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:80px">
-<div class="fl" style="display:flex;flex-direction:column">
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Our group</p>
-<a href="index.html">Squaricle Group</a><a href="ted-learning.html">ted Learning</a><a href="emerging-u.html">emerging-u</a><a href="https://hub.tedlearning.co.uk">ted HuB</a><a href="https://www.curiotraining.com">CurioTraining</a>
-</div>
-<div class="fl" style="display:flex;flex-direction:column">
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Policies</p>
-<a href="group-policies.html">Group policies</a><a href="privacy-policy.html">Privacy policy</a><a href="cookie-policy.html">Cookie policy</a><a href="cookie-policy.html#consent" data-consent-open>Cookie settings</a>
-</div>
-<div>
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Registered office</p>
-<p style="margin:0;font-size:16px;line-height:1.7;color:#ffffff">Squaricle Group Limited<br>First Floor, 85 Great Portland Street<br>London, W1W 7LT<br>Company number 12647309</p>
-</div>
-</div>
-<p style="margin:72px 0 0;font-size:15px;color:#ffffff">© Squaricle Group Limited</p>
-<p style="margin:16px 0 0;max-width:900px;font-size:12px;line-height:1.6;color:#ffffff">ted Learning Limited is not affiliated with or endorsed by TED Conferences LLC, TED Talks, TEDx, or TED-Ed. Any references to ‘ted’ on this website refer solely to ted Learning Limited, a separate and independent UK-based organisation specialising in drama-based learning &amp; workplace training.</p>
-</div>
-</footer>
-
-</div>
-<script type="text/plain" data-consent="statistics" src="js/analytics.js"></script>
-<script src="js/consent.js" defer></script>
-<script src="js/site.js" defer></script>
-</body>
-</html>
+<?php require __DIR__ . '/inc/footer.php'; ?>

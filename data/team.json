@@ -1,0 +1,160 @@
+[
+  {
+    "group": "leadership",
+    "rev": false,
+    "article_style": "padding-bottom:40px",
+    "photo": "assets/img/team-justin-smith-essex.jpg",
+    "alt": "Justin Smith-Essex",
+    "name": "Justin Smith-Essex",
+    "role": "Founder & Group CEO",
+    "paras": [
+      "Justin is the Group CEO of Squaricle Group Limited and one of the co-founders and Managing Director of ted Learning.",
+      "Justin works across the Group to support each brand in delivering against their business plan and vision. He is passionate about engaging learning and the use of drama to put people on the receiving end of an experience. He leads on our partnership discussions and managing the relationship with our stakeholders."
+    ]
+  },
+  {
+    "group": "leadership",
+    "rev": true,
+    "article_style": "padding-top:56px",
+    "photo": "assets/img/team-roxy-hooton.jpg",
+    "alt": "Roxy Hooton",
+    "name": "Roxy Hooton",
+    "role": "Director of Operations: Brands, People & Quality",
+    "paras": [
+      "Roxy is the Director of Operations: Brands, People & Quality for Squaricle Group, overseeing each of the brands’ product development, our People/HR functions and the quality of all of our products, regardless of how they are delivered to our customers.",
+      "She is a fundamental part of our team ensuring that our people are looked after and that our delivery is tailored to the clients’ needs and, from a quality perspective, is ‘on-brand’. She is responsible for overseeing recruitment of all trainers and actors and is part of both the main Group Board and Operations Board.",
+      "With a background in fashion retail management and learning & development, she has been managing teams and designing and delivering skills-based learning for over 20 years. Roxy has worked with ted Learning for over 6 years and really gets the brand and the need to ensure all of our learners are excited and engaged by their experience with us. In a previous role, she was also completely responsible for developing the entire curriculum and learning that OFSTED recognised as Good."
+    ],
+    "img_style": "object-position:15% 40%"
+  },
+  {
+    "group": "team",
+    "bg": "#5fad91",
+    "rev": false,
+    "photo": "assets/img/team-louisa-castledine.jpg",
+    "alt": "Louisa Castledine",
+    "name_color": "#1b2a24",
+    "name": "Louisa Castledine",
+    "role": "Client & Learning Partner",
+    "paras": [
+      "Louisa is our Client & Learning Partner for ted Apprenticeships. She has worked in education since graduating from University, with a Degree in Theatre Arts. She uses performance skills to keep learners engaged and entertained throughout the sessions! She doesn’t do the acting though, she has the ted professional actors for that!",
+      "Having worked in Apprenticeships for over 10 years, Louisa has held delivery, curriculum and quality roles. This provides a wealth of knowledge and experience when working with prestigious clients to upskill their workforce, and support individuals to achieve their goals."
+    ]
+  },
+  {
+    "group": "team",
+    "bg": "#cbbba0",
+    "rev": true,
+    "photo": "assets/img/team-laurence-davies.jpg",
+    "alt": "Laurence Davies",
+    "name_color": "#1b2a24",
+    "name": "Laurence Davies",
+    "role": "Head of Creative",
+    "paras": [
+      "Laurence is our Head of Creative at Squaricle Group. He is responsible for ensuring each brand’s look and feel is delivered in all the materials we produce and supporting all parts of the business in ensuring the essence and language is on brand.",
+      "He is obsessed with food and loves to travel and taste different cuisines."
+    ]
+  },
+  {
+    "group": "team",
+    "bg": "#eef2ef",
+    "rev": false,
+    "photo": "assets/img/team-michelle-boardman.jpg",
+    "alt": "Michelle Boardman",
+    "name_color": "#1b2a24",
+    "name": "Michelle Boardman",
+    "role": "Head of Online",
+    "paras": [
+      "Michelle is our Head of Online Learning at Squaricle Group. She works internally with the team when designing classroom/virtual sessions on how we digitise the product.",
+      "She also works with our clients to translate their learning needs into digital wonderment! Michelle is LEGO obsessed and any chance to get some, takes it!"
+    ]
+  },
+  {
+    "group": "team",
+    "bg": "#fcb040",
+    "rev": true,
+    "photo": "assets/img/team-ben-sammon.jpg",
+    "alt": "Ben Sammon",
+    "name_color": "#1b2a24",
+    "name": "Ben Sammon",
+    "role": "Multimedia Producer",
+    "paras": [
+      "Ben is the Multimedia Producer at Squaricle Group with his focus being on creating fun, engaging and interactive online content that reflects the nature of our brands.",
+      "He has the responsibility of turning our scripts into something that looks fantastic on various media platforms and specialises in creating animated content. Ben is also in his own band and loves making super creative objects!"
+    ]
+  },
+  {
+    "group": "team",
+    "bg": "#ffffff",
+    "rev": false,
+    "photo": "assets/img/team-jane-taylor.jpg",
+    "alt": "Jane Taylor",
+    "name_color": "#283d35",
+    "name": "Jane Taylor",
+    "role": "Group Planning Manager",
+    "paras": [
+      "Jane is our People Planning Manager and an integral part of the team. She supports with the booking of the trainers and actors for all our workshops across all brands within Squaricle Group. She makes sure that all of our clients are looked after by providing feedback summaries after all of our workshops.",
+      "Jane is also the first point of contact for all of our trainers, actors, learners and clients dealing with the many enquiries they may have."
+    ]
+  },
+  {
+    "group": "team",
+    "bg": "#5fad91",
+    "rev": true,
+    "photo": "assets/img/team-luisza-banzagale.jpg",
+    "alt": "Luisza Banzagale",
+    "name_color": "#1b2a24",
+    "name": "Luisza Banzagale",
+    "role": "Graphic Designer",
+    "paras": [
+      "Luisza is our Graphic Designer and a valued member of the ted Learning creative team, based in our Philippines office. She creates and produces our social media content, from eye-catching graphics to visuals that support our marketing campaigns.",
+      "Working closely with our Head of Creative, Luisza helps keep our visual identity consistent across social media and other creative projects. Much of her work happens behind the scenes, turning creative ideas into finished designs that make ted Learning instantly recognisable."
+    ],
+    "lazy": true
+  },
+  {
+    "group": "team",
+    "bg": "#cbbba0",
+    "rev": false,
+    "photo": "assets/img/team-erwin-taborda.jpg",
+    "alt": "Erwin Taborda",
+    "name_color": "#1b2a24",
+    "name": "Erwin Taborda",
+    "role": "Online Learning Specialist",
+    "paras": [
+      "Erwin works behind the scenes with Michelle to create our ted e-learning courses, building our digital learning products for both the ted Learning HuB and client platforms.",
+      "He transforms our dramatically different, engaging and fun live training into interactive digital modules. With a sharp eye for detail and a passion for accessible learning, Erwin makes sure every course keeps the energy and interactivity of the ted Learning experience."
+    ],
+    "lazy": true
+  },
+  {
+    "group": "team",
+    "bg": "#efa897",
+    "rev": true,
+    "photo": "assets/img/team-joy-aluning.jpg",
+    "alt": "Joy Aluning",
+    "name_color": "#1b2a24",
+    "name": "Joy Aluning",
+    "role": "Customer Relationship Manager",
+    "paras": [
+      "Joy is our Customer Relationship Manager at ted Learning. She manages client data as it enters the business, making sure it is accurately recorded and organised so the team can communicate effectively with clients.",
+      "Joy also produces and distributes our monthly newsletters, keeping clients and subscribers up to date with our news and training opportunities. Her attention to detail keeps our records tidy and our newsletters landing in the right inboxes!"
+    ],
+    "lazy": true
+  },
+  {
+    "group": "team",
+    "bg": "#fcb040",
+    "rev": false,
+    "photo": "assets/img/team-johanna-malicad.jpg",
+    "alt": "Johanna Malicad",
+    "name_color": "#1b2a24",
+    "name": "Johanna Malicad",
+    "role": "Finance & Contracts Manager",
+    "paras": [
+      "Johanna is a valued part-time member of the ted Learning team, working from our Philippines office. With years of experience in financial accountancy, she manages our day-to-day accounting, including invoicing, reconciling accounts and keeping accurate financial records.",
+      "Johanna also supports the onboarding of new clients, issuing contracts and making sure ted Learning is correctly set up as a supplier. She plays a vital role in keeping us financially on track and, perhaps most importantly, stopping us from spending too much money!"
+    ],
+    "lazy": true
+  }
+]

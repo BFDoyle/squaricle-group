@@ -1,46 +1,15 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy policy | Squaricle Group</title>
-<meta name="description" content="How Squaricle Group collects and processes your personal data.">
-<meta name="theme-color" content="#283d35">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Squaricle Group">
-<meta property="og:title" content="Privacy policy | Squaricle Group">
-<meta property="og:description" content="How Squaricle Group collects and processes your personal data.">
-<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/site.css">
-<link rel="stylesheet" href="css/consent.css">
-<link rel="stylesheet" href="css/privacy-policy.css">
-</head>
-<body>
-<div style="width:100%;background:#ffffff;font-family:'Montserrat',system-ui,sans-serif;color:#1b2a24;overflow:hidden">
-
-<a class="skip" href="#top">Skip to content</a>
-<header class="dk" style="background:#283d35">
-<div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;height:104px">
-<a href="index.html" aria-label="Squaricle Group home" style="display:block;line-height:0"><img src="assets/img/sg-symbol.png" alt="Squaricle Group" style="height:64px;width:64px;display:block"></a>
-<nav class="nav" id="site-nav" aria-label="Main" style="display:flex;align-items:center;gap:36px">
-<a href="index.html">Home</a>
-<div class="has-sub"><a href="index.html#brands">Businesses and partners</a><ul class="sub" aria-label="Businesses and partners"><li><a href="ted-learning.html">ted Learning</a></li><li><a href="https://hub.tedlearning.co.uk" target="_blank" rel="noopener">ted HuB</a></li><li><a href="emerging-u.html">emerging-u</a></li><li><a href="https://www.curiotraining.com" target="_blank" rel="noopener">CurioTraining</a></li></ul></div>
-<div class="has-sub"><a href="our-team.html">Our people</a><ul class="sub" aria-label="Our people"><li><a href="our-team.html#leadership">Leadership</a></li><li><a href="our-team.html">Our team</a></li></ul></div>
-<div class="has-sub"><a href="our-values.html">Our values</a><ul class="sub" aria-label="Our values"><li><a href="our-values.html">Our values &amp; mission</a></li><li><a href="diversity-and-inclusion.html">Diversity &amp; inclusion</a></li><li><a href="people-policy.html">People policy</a></li><li><a href="corporate-social-responsibility.html">Corporate social responsibility</a></li></ul></div>
-<a href="careers.html">Careers</a>
-<a href="index.html#contact" class="btn btn-s" style="min-height:44px;padding:0 22px;color:#1b2a24">Talk to us</a>
-</nav>
-<button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
-</div>
-</header>
-
-<main id="top">
+<?php
+$page = [
+    'title' => "Privacy policy | Squaricle Group",
+    'description' => "How Squaricle Group collects and processes your personal data.",
+    'css' => "privacy-policy",
+];
+require __DIR__ . '/inc/header.php';
+?>
 
 <section class="dk" style="background:#283d35;padding:40px 0 112px">
 <div class="wrap">
-<p style="margin:0 0 40px;font-size:16px;color:#ffffff"><a href="group-policies.html" style="color:#ffffff;font-weight:600">Group policies</a> / privacy policy</p>
+<p style="margin:0 0 40px;font-size:16px;color:#ffffff"><a href="group-policies.php" style="color:#ffffff;font-weight:600">Group policies</a> / privacy policy</p>
 <h1 style="margin:0;font-weight:800;font-size:clamp(56px,11vw,160px);line-height:0.92;letter-spacing:-0.045em;color:#ffffff">privacy policy</h1>
 </div>
 </section>
@@ -48,9 +17,9 @@
 <section style="padding:112px 0 128px">
 <div class="wrap two" style="display:grid;grid-template-columns:3fr 9fr;gap:72px;align-items:start">
 <nav class="side" aria-label="Policies and sections">
-<a href="group-policies.html">Group policies</a>
-<a href="privacy-policy.html" aria-current="page">Privacy policy</a>
-<a href="cookie-policy.html">Cookie policy</a>
+<a href="group-policies.php">Group policies</a>
+<a href="privacy-policy.php" aria-current="page">Privacy policy</a>
+<a href="cookie-policy.php">Cookie policy</a>
 <b>On this page</b>
 <a href="#data">What data we collect</a>
 <a href="#collect">How we collect it</a>
@@ -233,7 +202,7 @@
 
 <section id="cookies">
 <h2 class="h2">Cookies</h2>
-<p class="p">We use cookies and similar technologies on our websites. Some cookies are strictly necessary for the site to function. We will ask for your consent before using non-essential cookies, including analytics and advertising cookies. You can manage your cookie preferences at any time through our cookie settings tool. For more information, please see our <a href="cookie-policy.html">Cookie Notice</a>.</p>
+<p class="p">We use cookies and similar technologies on our websites. Some cookies are strictly necessary for the site to function. We will ask for your consent before using non-essential cookies, including analytics and advertising cookies. You can manage your cookie preferences at any time through our cookie settings tool. For more information, please see our <a href="cookie-policy.php">Cookie Notice</a>.</p>
 <p class="p" style="margin-top:36px"><b>Squaricle Group Privacy Notice. Updated Sept 2026</b></p>
 </section>
 
@@ -241,33 +210,4 @@
 </div>
 </section>
 
-</main>
-
-<footer class="dk" style="background:#283d35;padding:96px 0 48px;color:#ffffff">
-<div class="wrap">
-<p style="margin:0;font-weight:800;font-size:clamp(52px,9.4vw,136px);line-height:0.95;letter-spacing:-0.045em;color:#ffffff">squaricle group</p>
-<div class="three" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:80px">
-<div class="fl" style="display:flex;flex-direction:column">
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Our group</p>
-<a href="index.html">Squaricle Group</a><a href="ted-learning.html">ted Learning</a><a href="emerging-u.html">emerging-u</a><a href="https://hub.tedlearning.co.uk">ted HuB</a><a href="https://www.curiotraining.com">CurioTraining</a>
-</div>
-<div class="fl" style="display:flex;flex-direction:column">
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Policies</p>
-<a href="group-policies.html">Group policies</a><a href="privacy-policy.html">Privacy policy</a><a href="cookie-policy.html">Cookie policy</a><a href="cookie-policy.html#consent" data-consent-open>Cookie settings</a>
-</div>
-<div>
-<p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Registered office</p>
-<p style="margin:0;font-size:16px;line-height:1.7;color:#ffffff">Squaricle Group Limited<br>First Floor, 85 Great Portland Street<br>London, W1W 7LT<br>Company number 12647309</p>
-</div>
-</div>
-<p style="margin:72px 0 0;font-size:15px;color:#ffffff">© Squaricle Group Limited</p>
-<p style="margin:16px 0 0;max-width:900px;font-size:12px;line-height:1.6;color:#ffffff">ted Learning Limited is not affiliated with or endorsed by TED Conferences LLC, TED Talks, TEDx, or TED-Ed. Any references to ‘ted’ on this website refer solely to ted Learning Limited, a separate and independent UK-based organisation specialising in drama-based learning &amp; workplace training.</p>
-</div>
-</footer>
-
-</div>
-<script type="text/plain" data-consent="statistics" src="js/analytics.js"></script>
-<script src="js/consent.js" defer></script>
-<script src="js/site.js" defer></script>
-</body>
-</html>
+<?php require __DIR__ . '/inc/footer.php'; ?>
