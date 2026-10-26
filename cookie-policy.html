@@ -14,6 +14,7 @@
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/consent.css">
 <link rel="stylesheet" href="css/cookie-policy.css">
 </head>
 <body>
@@ -60,12 +61,13 @@
 <p class="p">This site uses different types of cookies. Some cookies are placed by third party services that appear on our pages.</p>
 <p class="p">You can at any time change or withdraw your consent from the Cookie Declaration on our website.</p>
 <p class="p">Learn more about who we are, how you can contact us and how we process personal data in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
-<div style="background:#eef2ef;padding:36px 40px;margin-top:12px;display:flex;flex-direction:column;gap:24px">
+<div id="consent" style="background:#eef2ef;padding:36px 40px;margin-top:12px;display:flex;flex-direction:column;gap:24px">
 <p class="p"><b>Your consent applies to the following domains:</b> www.squariclegroup.com</p>
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-<button type="button" class="btn btn-i">Change your consent</button>
-<button type="button" class="btn btn-o" style="box-shadow:inset 0 0 0 2px #1b2a24">Withdraw your consent</button>
+<button type="button" class="btn btn-i" data-consent-open>Change your consent</button>
+<button type="button" class="btn btn-o" style="box-shadow:inset 0 0 0 2px #1b2a24" data-consent-withdraw>Withdraw your consent</button>
 </div>
+<p class="p" id="consent-status" role="status" aria-live="polite" style="font-weight:600"></p>
 </div>
 <h2 class="h2" style="margin-top:32px">Manage cookie consent</h2>
 <p class="p">To provide the best experiences, ted Learning use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</p>
@@ -103,7 +105,7 @@
 </div>
 <div class="fl" style="display:flex;flex-direction:column">
 <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Policies</p>
-<a href="group-policies.html">Group policies</a><a href="privacy-policy.html">Privacy policy</a><a href="cookie-policy.html">Cookie policy</a>
+<a href="group-policies.html">Group policies</a><a href="privacy-policy.html">Privacy policy</a><a href="cookie-policy.html">Cookie policy</a><a href="cookie-policy.html#consent" data-consent-open>Cookie settings</a>
 </div>
 <div>
 <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897">Registered office</p>
@@ -115,6 +117,7 @@
 </footer>
 
 </div>
+<script src="js/consent.js" defer></script>
 <script src="js/site.js" defer></script>
 </body>
 </html>
