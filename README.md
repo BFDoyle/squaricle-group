@@ -39,6 +39,10 @@ The "we deliver training that makes people more productive" play button and each
 
 To change a video, edit the `data-vimeo="<id>"` number (and the matching `href`) on that link in `index.html`. If a video does not play on the live site, check its Vimeo privacy settings: videos limited to particular domains must have the new website's domain added in Vimeo (Settings, Privacy, "Where can this be embedded?").
 
+## Photo montage
+
+The montage on the home page slides slowly and endlessly, as on the old site (one full loop every 20 seconds). It pauses when the pointer is over it, and has a "Pause montage" button. For visitors who ask their device for reduced motion it is a still image they can scroll sideways. The image is `assets/img/montage.jpg`; the speed is the `20s` in `css/site.css`.
+
 ## Folders
 
 ```
