@@ -33,6 +33,12 @@ The menu has drop-down sub pages, matching the old website:
 
 The four Our values pages also share a row of tabs under the page heading so visitors can move between them. On phones the sub pages are listed under each heading in the menu.
 
+## Videos
+
+The "we deliver training that makes people more productive" play button and each of the nine project cards on the home page open their Vimeo video in a pop-up. The player is loaded only when someone clicks, with Vimeo's "do not track" option on, and is removed when the pop-up closes. Without JavaScript the links open the video on vimeo.com.
+
+To change a video, edit the `data-vimeo="<id>"` number (and the matching `href`) on that link in `index.html`. If a video does not play on the live site, check its Vimeo privacy settings: videos limited to particular domains must have the new website's domain added in Vimeo (Settings, Privacy, "Where can this be embedded?").
+
 ## Folders
 
 ```

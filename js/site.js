@@ -64,6 +64,44 @@
     });
   }
 
+  /* Vimeo pop-up. Any link with data-vimeo="<id>" opens its video in a pop-up.
+     The player is only loaded when someone clicks, and is removed again when the pop-up closes.
+     Without JavaScript the link simply opens the video on Vimeo. */
+  var triggers = document.querySelectorAll('[data-vimeo]');
+  if (triggers.length && typeof HTMLDialogElement === 'function') {
+    var dlg = document.createElement('dialog');
+    dlg.className = 'sg-video';
+    dlg.innerHTML =
+      '<div class="sg-video-bar"><p class="sg-video-title"></p>' +
+      '<button type="button" class="sg-video-close" aria-label="Close video">Close</button></div>' +
+      '<div class="sg-video-frame"></div>' +
+      '<p class="sg-video-note">This video is hosted on Vimeo.</p>';
+    document.body.appendChild(dlg);
+    var frame = dlg.querySelector('.sg-video-frame');
+    var heading = dlg.querySelector('.sg-video-title');
+
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-vimeo]');
+      if (!t || e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) { return; }
+      e.preventDefault();
+      var title = (t.getAttribute('data-title') || 'Video').replace(/&amp;/g, '&');
+      var f = document.createElement('iframe');
+      f.src = 'https://player.vimeo.com/video/' + encodeURIComponent(t.getAttribute('data-vimeo')) +
+        '?autoplay=1&dnt=1&title=0&byline=0&portrait=0';
+      f.title = title;
+      f.allow = 'autoplay; fullscreen; picture-in-picture';
+      f.setAttribute('allowfullscreen', '');
+      frame.innerHTML = '';
+      frame.appendChild(f);
+      heading.textContent = title;
+      dlg.setAttribute('aria-label', title);
+      dlg.showModal();
+    });
+    dlg.querySelector('.sg-video-close').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) { dlg.close(); } });
+    dlg.addEventListener('close', function () { frame.innerHTML = ''; });
+  }
+
   /* Forms.
      Set data-endpoint="https://..." on a <form> (for example a Formspree or Netlify endpoint)
      and it posts there with fetch. Without an endpoint it shows a notice and sends nothing. */
