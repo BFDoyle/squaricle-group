@@ -41,7 +41,7 @@ To change a video, edit the `data-vimeo="<id>"` number (and the matching `href`)
 
 ## Photo montage
 
-The montage on the home page slides slowly and endlessly, as on the old site (one full loop every 20 seconds). It pauses when the pointer is over it, and has a "Pause montage" button. For visitors who ask their device for reduced motion it is a still image they can scroll sideways. The image is `assets/img/montage.jpg`; the speed is the `20s` in `css/site.css`.
+The montage on the home page slides slowly and endlessly, as on the old site (one full loop every 20 seconds). It starts on its own, and pauses while the pointer is over it. For visitors who ask their device for reduced motion it is a still image they can scroll sideways. The image is `assets/img/montage.jpg`; the speed is the `20s` in `css/site.css`.
 
 ## Folders
 

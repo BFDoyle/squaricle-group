@@ -49,17 +49,6 @@
     toggle.addEventListener('click', function () { setState(video.hidden); });
   }
 
-  /* Photo montage: pause / play */
-  var marquee = document.querySelector('.marquee');
-  var marqueeBtn = document.querySelector('.marquee-toggle');
-  if (marquee && marqueeBtn) {
-    marqueeBtn.addEventListener('click', function () {
-      var paused = marquee.classList.toggle('paused');
-      marqueeBtn.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      marqueeBtn.textContent = paused ? 'Play montage' : 'Pause montage';
-    });
-  }
-
   /* Project filter */
   var chips = document.querySelectorAll('[data-filter]');
   var cards = document.querySelectorAll('[data-category]');
