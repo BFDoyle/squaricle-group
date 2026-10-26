@@ -22,6 +22,17 @@ A static website: plain HTML, CSS and a little JavaScript. No build step, no fra
 
 ted HuB and CurioTraining link out to their own sites (`hub.tedlearning.co.uk` and `www.curiotraining.com`).
 
+## Menu and sub pages
+
+The menu has drop-down sub pages, matching the old website:
+
+- **Businesses and partners:** ted Learning, ted HuB, emerging-u, CurioTraining
+- **Our people:** Leadership (a section of the Our team page), Our team
+- **Our values:** Our values and mission, Diversity and inclusion, People policy, Corporate social responsibility
+- **Careers** and **Talk to us**
+
+The four Our values pages also share a row of tabs under the page heading so visitors can move between them. On phones the sub pages are listed under each heading in the menu.
+
 ## Folders
 
 ```
@@ -56,6 +67,7 @@ Then open http://localhost:8000. (Opening `index.html` straight from disk also w
 3. **Cookie consent.** The site sets no cookies and loads no third-party scripts at the moment. If you add analytics or a chat bot, add a consent banner and update `cookie-policy.html`. The cookie page's domain line is marked "to be confirmed".
 4. **Privacy notice.** The text was copied from the current site, which has about 20 sentences that stop mid-way. They are marked with [...]. Have the owner of the document complete them, and confirm the version date (the current page reads "1 September 20226").
 5. **Group policies.** The "View policy" links on `group-policies.html` go nowhere yet. Link each to its PDF or page.
+6. **Mission statement.** `our-values.html` has a placeholder under "our mission". The current website refers to a mission statement but doesn't show one.
 6. **Vacancies.** `careers.html` has a placeholder where current vacancies should be listed.
 7. **Domain.** `sitemap.xml` and `robots.txt` assume `https://www.squariclegroup.com/`. Change them if the domain differs.
 8. **Old addresses.** The redirects in `.htaccess` and `_redirects` send the old WordPress paths (for example `/our-team/` and `/site-notice/`) to the new pages, so existing links and search rankings keep working. Check them against Google Search Console once it is live.
