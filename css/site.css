@@ -224,3 +224,18 @@ header { position: relative; z-index: 30; }
 }
 .form-status[hidden] { display: none; }
 .form-status.error { background: #1b2a24; color: #ffffff; }
+
+/* Client logos: two rows that slide in opposite directions (the logos are white, so they sit on the dark green band) */
+.logos { margin-top: 56px; overflow: hidden; }
+.logo-row { overflow: hidden; }
+.logo-track { display: flex; width: max-content; animation: sg-logos 90s linear infinite; }
+.logo-row.rev .logo-track { animation-direction: reverse; animation-duration: 100s; }
+.logos:hover .logo-track { animation-play-state: paused; }
+.logo-track img { display: block; flex: none; width: 150px; height: 150px; margin: 0 6px; }
+@keyframes sg-logos { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 900px) { .logo-track img { width: 110px; height: 110px; margin: 0 4px; } }
+@media (prefers-reduced-motion: reduce) {
+  .logo-row { overflow-x: auto; }
+  .logo-track { animation: none; }
+  .logo-track img[aria-hidden="true"] { display: none; }
+}

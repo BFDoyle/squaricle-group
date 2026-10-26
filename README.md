@@ -43,6 +43,10 @@ To change a video, edit the `data-vimeo="<id>"` number (and the matching `href`)
 
 The montage on the home page slides slowly and endlessly, as on the old site (one full loop every 20 seconds). It starts on its own, and pauses while the pointer is over it. For visitors who ask their device for reduced motion it is a still image they can scroll sideways. The image is `assets/img/montage.jpg`; the speed is the `20s` in `css/site.css`.
 
+## Client logos
+
+The "you're in good company" band on the home page is two rows of client logos sliding in opposite directions (89 logos in `assets/img/clients/`, white SVGs on the dark green band). They pause while the pointer is over them, and are a still, sideways-scrolling row for visitors who ask for reduced motion. To add a logo, drop a white SVG in that folder and add an `<img>` to the first copy of a row in `index.html` plus a matching `aria-hidden` one in the second copy; the speed is the `90s` / `100s` in `css/site.css`.
+
 ## Folders
 
 ```
