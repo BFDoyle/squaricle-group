@@ -1,0 +1,212 @@
+[
+    {
+        "id": "home",
+        "file": "index.php",
+        "title": "Squaricle Group | Training that makes great people",
+        "description": "Squaricle Group is made up of several great brands, delivering training that makes truly great people: ted Learning, ted HuB, emerging-u and CurioTraining.",
+        "type": "WebPage",
+        "parent": null,
+        "priority": "1.0",
+        "changefreq": "monthly",
+        "deps": [
+            "clients",
+            "projects"
+        ],
+        "llms": {
+            "section": "About",
+            "blurb": "Who Squaricle Group is, our four brands, the services we deliver and some of our latest projects."
+        },
+        "lastmod": "2026-10-27"
+    },
+    {
+        "id": "ted-learning",
+        "file": "ted-learning.php",
+        "title": "Theatre based learning with ted Learning | Squaricle Group",
+        "description": "ted Learning has delivered dramatically different, engaging and fun theatre based learning since 2012, in the classroom and as blended learning.",
+        "type": "WebPage",
+        "parent": "home",
+        "crumb": "ted Learning",
+        "priority": "0.9",
+        "changefreq": "monthly",
+        "deps": [],
+        "llms": {
+            "section": "Brands",
+            "blurb": "ted Learning: theatre based learning and training using professional actors and expert trainers, founded 2012."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "emerging-u",
+        "file": "emerging-u.php",
+        "title": "emerging-u | Leadership Learning & Development Agency",
+        "description": "emerging-u is a Leadership Learning and Development Agency that specialises in culture change, leadership development and team effectiveness.",
+        "type": "WebPage",
+        "parent": "home",
+        "crumb": "emerging-u",
+        "priority": "0.8",
+        "changefreq": "monthly",
+        "deps": [],
+        "llms": {
+            "section": "Brands",
+            "blurb": "emerging-u: leadership, teams and customer experience development; we create the conditions for change."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "our-team",
+        "file": "our-team.php",
+        "title": "Our team and leadership | Squaricle Group",
+        "description": "Meet the leadership team and people behind Squaricle Group, including Group CEO Justin Smith-Essex and Director of Operations Roxy Hooton.",
+        "type": "AboutPage",
+        "parent": "home",
+        "crumb": "Our team",
+        "priority": "0.7",
+        "changefreq": "monthly",
+        "deps": [
+            "team"
+        ],
+        "llms": {
+            "section": "About",
+            "blurb": "The leadership team and wider team behind the Group."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "our-values",
+        "file": "our-values.php",
+        "title": "Our values | One Team, Commercial Success, Innovative",
+        "description": "The values embedded in everything Squaricle Group does: One Team, Commercial Success and Innovative, and what they mean for clients, learners and our people.",
+        "type": "AboutPage",
+        "parent": "home",
+        "crumb": "Our values",
+        "priority": "0.6",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "About",
+            "blurb": "The Group values: One Team, Commercial Success and Innovative."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "diversity-and-inclusion",
+        "file": "diversity-and-inclusion.php",
+        "title": "Diversity and inclusion | Squaricle Group",
+        "description": "Squaricle Group is committed to an inclusive, diverse culture where everyone is treated with respect. Read our diversity and inclusion commitments.",
+        "type": "WebPage",
+        "parent": "our-values",
+        "crumb": "Diversity and inclusion",
+        "priority": "0.5",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "About",
+            "blurb": "Our commitments on diversity and inclusion."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "people-policy",
+        "file": "people-policy.php",
+        "title": "People policy | Discover, Nurture, Retain | Squaricle Group",
+        "description": "Our People Strategy: how Squaricle Group discovers the right people, nurtures their talent and retains them to support long-term success.",
+        "type": "WebPage",
+        "parent": "our-values",
+        "crumb": "People policy",
+        "priority": "0.5",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "About",
+            "blurb": "Our People Strategy: discover, nurture and retain."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "corporate-social-responsibility",
+        "file": "corporate-social-responsibility.php",
+        "title": "Corporate social responsibility | Squaricle Group",
+        "description": "How Squaricle Group gives back and does business responsibly: our commitments to people, the community and the environment.",
+        "type": "WebPage",
+        "parent": "our-values",
+        "crumb": "Corporate social responsibility",
+        "priority": "0.5",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "About",
+            "blurb": "How the Group gives back and looks after people and the environment."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "careers",
+        "file": "careers.php",
+        "title": "Careers | Join the Squaricle Group team",
+        "description": "Join the Squaricle Group family. Read about our benefits, where our team is based and how to apply, including for freelance trainers and actors.",
+        "type": "WebPage",
+        "parent": "home",
+        "crumb": "Careers",
+        "priority": "0.6",
+        "changefreq": "monthly",
+        "deps": [],
+        "llms": {
+            "section": "About",
+            "blurb": "Working for the Group: benefits, where the team is based, and how to apply."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "group-policies",
+        "file": "group-policies.php",
+        "title": "Group policies | Squaricle Group",
+        "description": "Squaricle Group policies: anti-bribery and corruption, sexual harassment prevention, equal opportunities, whistleblowing, complaints, safeguarding and direct marketing.",
+        "type": "CollectionPage",
+        "parent": "home",
+        "crumb": "Group policies",
+        "priority": "0.4",
+        "changefreq": "yearly",
+        "deps": [
+            "policies"
+        ],
+        "llms": {
+            "section": "Policies",
+            "blurb": "Group policies as PDFs and the privacy notice."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "privacy-policy",
+        "file": "privacy-policy.php",
+        "title": "Privacy policy | Squaricle Group",
+        "description": "How Squaricle Group collects, uses and protects your personal data, and your rights under data protection law.",
+        "type": "WebPage",
+        "parent": "group-policies",
+        "crumb": "Privacy policy",
+        "priority": "0.3",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "Policies",
+            "blurb": "How we collect and process personal data."
+        },
+        "lastmod": "2026-10-26"
+    },
+    {
+        "id": "cookie-policy",
+        "file": "cookie-policy.php",
+        "title": "Cookie policy | Squaricle Group",
+        "description": "How Squaricle Group uses cookies on this website, and how to change or withdraw your cookie consent at any time.",
+        "type": "WebPage",
+        "parent": "group-policies",
+        "crumb": "Cookie policy",
+        "priority": "0.3",
+        "changefreq": "yearly",
+        "deps": [],
+        "llms": {
+            "section": "Policies",
+            "blurb": "Which cookies we use and how to change your consent."
+        },
+        "lastmod": "2026-10-26"
+    }
+]

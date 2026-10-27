@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "ted Learning | Squaricle Group",
-    'description' => "ted Learning has delivered dramatically different, engaging and fun theatre based learning since 2012, in the classroom and as blended learning.",
+    'id' => 'ted-learning',
     'css' => "ted-learning",
     'nav' => 'brands',
     'sub' => 'ted-learning.php',
@@ -51,7 +50,7 @@ require __DIR__ . '/inc/header.php';
 </div>
 </section>
 
-<section style="background:#eef2ef;padding:128px 0">
+<section id="theatre-based-learning" style="background:#eef2ef;padding:128px 0">
 <div class="wrap two" style="display:grid;grid-template-columns:6fr 6fr;gap:72px;align-items:center">
 <img src="assets/img/project-brand-briefing.jpg" alt="A ted Learning session in progress" style="display:block;width:100%;height:520px;object-fit:cover">
 <div style="display:flex;flex-direction:column;gap:24px">
@@ -65,7 +64,7 @@ require __DIR__ . '/inc/header.php';
 </div>
 </section>
 
-<section class="dk" style="background:#283d35;padding:128px 0">
+<section id="blended-learning" class="dk" style="background:#283d35;padding:128px 0">
 <div class="wrap two" style="display:grid;grid-template-columns:7fr 5fr;gap:72px;align-items:center">
 <div style="display:flex;flex-direction:column;gap:28px">
 <h2 class="h2" style="color:#ffffff">What is blended learning?</h2>
@@ -91,7 +90,7 @@ require __DIR__ . '/inc/header.php';
 </div>
 </section>
 
-<section style="background:#eef2ef;padding:128px 0">
+<section id="steps" style="background:#eef2ef;padding:128px 0">
 <div class="wrap">
 <h2 class="h2">Our 5 steps to learning</h2>
 <p class="p" style="margin-top:16px;max-width:640px">At ted Learning we always follow 5 steps when working with any new client.</p>
@@ -105,21 +104,19 @@ require __DIR__ . '/inc/header.php';
 </ol>
 </section>
 
-<section style="padding:128px 0">
+<section id="faq" style="padding:128px 0">
 <div class="wrap two" style="display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start">
 <div>
 <h2 class="h2">we are here to help you</h2>
 <p class="p" style="margin-top:20px">Still unsure about working with us? Our FAQ might help, or visit our website at www.tedlearning.co.uk.</p>
 </div>
 <div class="faq" style="background:#eef2ef;padding:20px">
-<details open>
-<summary>Who do you work with?<span aria-hidden="true">+</span></summary>
-<div class="a"><p class="p">ted Learning works across all sectors and industries. From manufacturing, retail, insurance, hospitality, financial, travel, tech to local authority and housing associations. We pride ourselves on the depth of organisations we work with, from small teams to delivering large conferences to over 500 employees.</p></div>
+<?php foreach (data('ted-faq') as $i => $item): ?>
+<details<?= $i === 0 ? ' open' : '' ?>>
+<summary><?= e($item['q']) ?><span aria-hidden="true">+</span></summary>
+<div class="a"><p class="p"><?= e($item['a']) ?></p></div>
 </details>
-<details>
-<summary>What makes ted Learning different?<span aria-hidden="true">+</span></summary>
-<div class="a"><p class="p">Learning should be engaging and fun. ted Learning delivers dramatically different, engaging and fun. People laugh but learn. Our actors deliver realistic scenarios that ensure people feel the learning as well as seeing and hearing it. And our expert trainers are experienced in their subject matter: if they deliver project management, they have been a project manager in the past. If they deliver customer service training, they have worked in a customer service environment.</p></div>
-</details>
+<?php endforeach; ?>
 </div>
 </div>
 </section>

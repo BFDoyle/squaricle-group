@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Our values | Squaricle Group",
-    'description' => "Squaricle Group values: One Team, Commercial Success and Innovative.",
+    'id' => 'our-values',
     'css' => "our-values",
     'nav' => 'values',
     'sub' => 'our-values.php',

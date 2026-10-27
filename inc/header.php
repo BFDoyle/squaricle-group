@@ -7,6 +7,13 @@ if (!isset($page)) {
     exit;
 }
 require_once __DIR__ . '/bootstrap.php';
+require_once __DIR__ . '/seo.php';
+if (!empty($page['id'])) {
+    $entry = page_by_id($page['id']);
+    if ($entry) {
+        $page = $entry + $page;
+    }
+}
 $site = data('site');
 $navKey = $page['nav'] ?? '';
 $subHref = $page['sub'] ?? '';

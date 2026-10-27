@@ -1,6 +1,14 @@
+# Squaricle Group: all search engines and AI assistants are welcome to read the public pages.
 User-agent: *
 Allow: /
 Disallow: /submit.php
 Disallow: /thank-you.php
+Disallow: /inc/
+Disallow: /config/
+Disallow: /data/
+Disallow: /storage/
 
+# Helpful files for search engines and AI assistants
 Sitemap: https://www.squariclegroup.com/sitemap.xml
+# llms.txt (a short guide to the site for AI assistants): https://www.squariclegroup.com/llms.txt
+# llms-full.txt (the readable text of every page): https://www.squariclegroup.com/llms-full.txt

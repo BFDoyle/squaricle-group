@@ -1,15 +1,12 @@
-/* Google Analytics (gtag.js).
-   This file is only loaded after a visitor allows "Statistics" cookies (see js/consent.js).
-   Every page includes it as:
+/* Google Analytics 4 (gtag.js), property G-JKTF88N1V7.
+   This file is only loaded after a visitor allows "Statistics" cookies (see js/consent.js), so nothing is sent to
+   Google before consent. Every page includes it as:
      <script type="text/plain" data-consent="statistics" src="js/analytics.js"></script>
-
-   NOTE: UA-... IDs are Universal Analytics, which Google stopped processing in 2023.
-   For a current Google Analytics 4 property, replace the ID below with its G-XXXXXXXXXX
-   measurement ID. Nothing else needs to change. */
+   It is the same as Google's standard tag, but loaded on consent. To use a different property, change the ID below. */
 (function () {
   'use strict';
 
-  var GA_ID = 'UA-163660789-1';
+  var GA_ID = 'G-JKTF88N1V7';
 
   /* Honour a later withdrawal of consent during the same visit */
   document.addEventListener('sg:consent', function (e) {

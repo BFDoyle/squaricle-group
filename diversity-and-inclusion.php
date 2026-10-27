@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Diversity and inclusion | Squaricle Group",
-    'description' => "Squaricle Group is committed to creating an inclusive and diverse culture.",
+    'id' => 'diversity-and-inclusion',
     'css' => "diversity-and-inclusion",
     'nav' => 'values',
     'sub' => 'diversity-and-inclusion.php',

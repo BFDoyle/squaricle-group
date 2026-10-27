@@ -2,6 +2,14 @@
 /* Site settings. Change values here; nothing else in the code needs editing.
    Any value can also be set as an environment variable on the server (the name is shown beside it). */
 return [
+    /* The address the live site is served from, with no trailing slash. Used for canonical links, social sharing
+       tags, structured data, the sitemap and llms.txt. SG_SITE_URL */
+    'site_url' => getenv('SG_SITE_URL') ?: 'https://www.squariclegroup.com',
+
+    /* Search Console / Bing Webmaster verification codes (the content="..." value of the meta tag). Leave empty if not used. */
+    'verify_google' => '',
+    'verify_bing' => '',
+
     /* Where form submissions are sent. SG_WEBHOOK_URL */
     'webhook_url' => getenv('SG_WEBHOOK_URL') ?: 'https://www.tedlearning.co.uk/wp-json/uap/v2/uap-60975-60977',
 

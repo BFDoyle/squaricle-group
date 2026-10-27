@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Squaricle Group | Training that makes great people",
-    'description' => "Squaricle Group is made up of several great brands, delivering training that makes truly great people: ted Learning, ted HuB, emerging-u and CurioTraining.",
+    'id' => 'home',
     'css' => "index",
     'overlay' => true,
 ];

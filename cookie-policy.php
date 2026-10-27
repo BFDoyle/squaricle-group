@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Cookie policy | Squaricle Group",
-    'description' => "How Squaricle Group uses cookies and how to change or withdraw your consent.",
+    'id' => 'cookie-policy',
     'css' => "cookie-policy",
 ];
 require __DIR__ . '/inc/header.php';

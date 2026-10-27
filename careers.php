@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Careers | Squaricle Group",
-    'description' => "Join the Squaricle Group family. Benefits, where we are based and how to apply.",
+    'id' => 'careers',
     'css' => "careers",
     'nav' => 'careers',
 ];

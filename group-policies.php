@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Group policies | Squaricle Group",
-    'description' => "Squaricle Group policies, including anti-bribery, equal opportunities, whistleblowing, safeguarding and privacy.",
+    'id' => 'group-policies',
     'css' => "group-policies",
 ];
 require __DIR__ . '/inc/header.php';

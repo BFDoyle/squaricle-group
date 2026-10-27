@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Corporate social responsibility | Squaricle Group",
-    'description' => "Giving back, people and environment: how Squaricle Group does business responsibly.",
+    'id' => 'corporate-social-responsibility',
     'css' => "corporate-social-responsibility",
     'nav' => 'values',
     'sub' => 'corporate-social-responsibility.php',

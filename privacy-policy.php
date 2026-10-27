@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Privacy policy | Squaricle Group",
-    'description' => "How Squaricle Group collects and processes your personal data.",
+    'id' => 'privacy-policy',
     'css' => "privacy-policy",
 ];
 require __DIR__ . '/inc/header.php';

@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "Our team | Squaricle Group",
-    'description' => "Meet the leadership team and people behind Squaricle Group.",
+    'id' => 'our-team',
     'css' => "our-team",
     'nav' => 'people',
     'sub' => 'our-team.php',

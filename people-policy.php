@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "People policy | Squaricle Group",
-    'description' => "Our People Strategy: discover, nurture and retain the right people.",
+    'id' => 'people-policy',
     'css' => "people-policy",
     'nav' => 'values',
     'sub' => 'people-policy.php',

@@ -1,7 +1,6 @@
 <?php
 $page = [
-    'title' => "emerging-u | Squaricle Group",
-    'description' => "emerging-u is a Leadership Learning and Development Agency that specialises in culture change, leadership development and team effectiveness.",
+    'id' => 'emerging-u',
     'css' => "emerging-u",
     'nav' => 'brands',
     'sub' => 'emerging-u.php',

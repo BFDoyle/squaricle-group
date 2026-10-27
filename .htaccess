@@ -21,6 +21,13 @@ RewriteRule ^careers-with-ted-learning-group/?$ /careers.php [R=301,L]
 RewriteRule ^emerging-u/?$ /emerging-u.php [R=301,L]
 RewriteRule ^ted-learning/?$ /ted-learning.php [R=301,L]
 RewriteRule ^talk-to-the-squaricle-group/?$ /index.php#contact [R=301,NE,L]
+RewriteRule ^policies/?$ /group-policies.php [R=301,L]
+RewriteRule ^privacy-tools/?$ /privacy-policy.php [R=301,L]
+RewriteRule ^our-clients/?$ /index.php#clients [R=301,NE,L]
+RewriteRule ^what-is-theatre-based-learning/?$ /ted-learning.php#theatre-based-learning [R=301,NE,L]
+RewriteRule ^ted-approach-to-learning/?$ /ted-learning.php#steps [R=301,NE,L]
+RewriteRule ^ted-learning-values/?$ /our-values.php [R=301,L]
+RewriteRule ^portfolio/(justin-smith-essex|roxy-hooton)/?$ /our-team.php#leadership [R=301,NE,L]
 
 # The first test build used .html addresses: send them to the matching .php page
 RewriteRule ^index\.html$ / [R=301,L]
