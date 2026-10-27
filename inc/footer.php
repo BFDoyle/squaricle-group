@@ -3,7 +3,10 @@
 
 <footer class="dk" style="background:#283d35;padding:96px 0 48px;color:#ffffff">
 <div class="wrap">
+<div class="foot-brand">
+<img src="assets/img/sg-footer-logo.png" alt="" width="370" height="480" loading="lazy">
 <p style="margin:0;font-weight:800;font-size:clamp(52px,9.4vw,136px);line-height:0.95;letter-spacing:-0.045em;color:#ffffff"><?= e(strtolower($site['name'])) ?></p>
+</div>
 <div class="three" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:80px">
 <?php foreach ($site['footer']['columns'] as $col): ?>
 <div class="fl" style="display:flex;flex-direction:column">

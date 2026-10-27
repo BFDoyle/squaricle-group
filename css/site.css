@@ -242,3 +242,8 @@ header { position: relative; z-index: 30; }
 
 /* Spam trap field inside every form: off screen, never seen or tabbed to by people */
 .hp { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* Footer: logo on the left of the large "squaricle group" wordmark */
+.foot-brand { display: flex; align-items: center; gap: clamp(24px, 4vw, 64px); }
+.foot-brand img { display: block; flex: none; width: auto; height: clamp(120px, 15vw, 220px); }
+.foot-brand p { min-width: 0; }
