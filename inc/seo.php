@@ -64,6 +64,7 @@ function org_node(bool $full): array
     $n['foundingDate'] = $o['foundingDate'];
     $n['email'] = $o['email'];
     $n['telephone'] = $o['telephone'];
+    $n['sameAs'] = array_column($o['social'], 'url');
     $n['address'] = ['@type' => 'PostalAddress'] + $o['address'];
     $n['contactPoint'] = [[
         '@type' => 'ContactPoint',

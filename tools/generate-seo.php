@@ -60,6 +60,7 @@ $lines[] = '';
 $lines[] = '> ' . $org['description'];
 $lines[] = '';
 $lines[] = $org['legalName'] . ' (company number ' . $org['companyNumber'] . ') is based in London. Registered office: ' . $o['streetAddress'] . ', ' . $o['addressLocality'] . ', ' . $o['postalCode'] . '. Phone: ' . $org['telephoneDisplay'] . '. Email: ' . $org['email'] . '.';
+$lines[] = 'Social: ' . implode(', ', array_map(fn($s) => '[' . $s['name'] . '](' . $s['url'] . ')', $org['social'])) . '.';
 $lines[] = '';
 $lines[] = 'The Group\'s brands are ' . implode(', ', array_map(fn($b) => $b['name'], $org['brands'])) . '. Each brand\'s own website is linked below.';
 $lines[] = '';
