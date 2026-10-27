@@ -268,3 +268,7 @@ header { position: relative; z-index: 30; }
 .foot-brand { display: flex; align-items: center; gap: clamp(24px, 4vw, 64px); }
 .foot-brand img { display: block; flex: none; width: auto; height: clamp(120px, 15vw, 220px); }
 .foot-brand p { min-width: 0; }
+
+/* Footer contact line */
+.fc a { color: #ffffff; text-decoration: underline; text-underline-offset: 3px; }
+.fc a:hover { color: #efa897; }

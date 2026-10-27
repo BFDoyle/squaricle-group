@@ -18,6 +18,8 @@
 <div>
 <p style="margin:0 0 8px;font-size:20px;font-weight:700;color:#efa897"><?= e($site['footer']['registered_office']['title']) ?></p>
 <p style="margin:0;font-size:16px;line-height:1.7;color:#ffffff"><?= implode('<br>', array_map('e', $site['footer']['registered_office']['lines'])) ?></p>
+<?php $org = data('organization'); ?>
+<p class="fc" style="margin:20px 0 0;font-size:16px;line-height:1.7;color:#ffffff">Phone: <a href="tel:<?= e(preg_replace('/\s+/', '', $org['telephone'])) ?>"><?= e($org['telephoneDisplay']) ?></a><br>Email: <a href="mailto:<?= e($org['email']) ?>"><?= e($org['email']) ?></a></p>
 </div>
 </div>
 <p style="margin:72px 0 0;font-size:15px;color:#ffffff"><?= e($site['footer']['copyright']) ?></p>

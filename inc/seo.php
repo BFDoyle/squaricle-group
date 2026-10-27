@@ -63,11 +63,13 @@ function org_node(bool $full): array
     $n['description'] = $o['description'];
     $n['foundingDate'] = $o['foundingDate'];
     $n['email'] = $o['email'];
+    $n['telephone'] = $o['telephone'];
     $n['address'] = ['@type' => 'PostalAddress'] + $o['address'];
     $n['contactPoint'] = [[
         '@type' => 'ContactPoint',
         'contactType' => 'customer service',
         'email' => $o['email'],
+        'telephone' => $o['telephone'],
         'areaServed' => 'GB',
         'availableLanguage' => 'en',
     ]];
