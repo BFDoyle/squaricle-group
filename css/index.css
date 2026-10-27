@@ -31,7 +31,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .bt{display:block;width:300px;height:300px;flex:none;object-fit:cover}
 .bb{padding:40px;display:flex;flex-direction:column;gap:20px;flex:1;min-width:0}
 @media(max-width:900px){.brand{flex-direction:column}.bt{width:100%;height:auto;aspect-ratio:1/1}}
-@media(prefers-reduced-motion:reduce){.herovid{display:none}}
 @media(max-width:900px){
 .wrap{padding:0 20px}
 .two{grid-template-columns:1fr !important}

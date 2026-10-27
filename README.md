@@ -64,10 +64,9 @@ config/config.php   settings; closed to the web
 storage/            copies of enquiries the webhook did not accept, and CV files; closed to the web
 css/site.css        shared: fonts, mobile menu, forms, project filter, hero video
 css/<page>.css      styles for each page
-js/site.js          mobile menu, hero video pause, project filter, form sending
+js/site.js          mobile menu, hero background video, project filter, form sending
 js/consent.js       cookie consent;  js/analytics.js  Google Analytics (after consent)
 assets/img/         photos, logos, client logos (clients/), team photos
-assets/video/       hero video loop
 assets/fonts/       Montserrat (self-hosted, so no requests go to Google)
 .htaccess           Apache: clean URLs, redirects from the old addresses, closes the private folders
 sitemap.xml         for search engines (check the domain, see below)
@@ -104,7 +103,7 @@ What the webhook receives (as a JSON body by default): `form` (which form), `for
 
 ## Before launch: things to finish
 
-1. **Hero video.** `assets/video/hero-loop.mp4` is a stand-in made from your project photographs. Replace it with real footage: silent, 8 to 12 seconds, around 1280 x 720, under 3MB. Keep the same file name, or change it in `index.php`.
+1. **Hero video.** The home page hero plays https://vimeo.com/540550693 as a muted, looping background (Vimeo's "background" player, with Vimeo's do-not-track option on). It loads once the page has finished loading and fades in when it starts; until then, and for visitors who ask their device for reduced motion, the hero shows a still photo. There is no pause button. To change the video, edit the number in the `data-src` of the `hero-video` iframe in `index.php`. The video must be allowed to be embedded on this domain in Vimeo (Settings, Privacy, "Where can this be embedded?"), or it will not play. Vimeo is a third party, so the privacy and cookie notices should mention it.
 2. **Forms.** Done, apart from connecting the receiving end (see "Forms and the webhook"). The privacy notice should say that enquiries are passed to ted Learning Limited.
 3. **Cookie consent.** The site has its own consent tool (`js/consent.js` and `css/consent.css`): a banner on first visit with Accept all, Reject all and Manage preferences, a preferences panel (Functional is always on; Preferences, Statistics and Marketing are off until allowed), and a "Cookie settings" link in every footer. The "Change your consent" and "Withdraw your consent" buttons on the cookie policy page are connected to it. The choice is kept in one cookie, `sg_consent`, for 12 months. Google Analytics is loaded through this tool: `js/analytics.js` holds the measurement ID and only runs once a visitor allows Statistics. Rejecting or withdrawing removes the `_ga`, `_gid` and `_ga_*` cookies and switches tracking off. **The ID currently in the file, `UA-163660789-1`, is a Universal Analytics ID. Google stopped processing those in 2023, so it will record nothing. Create a Google Analytics 4 property and put its `G-XXXXXXXXXX` ID in `js/analytics.js` (one line).** The site sets no other cookies and loads no other third-party scripts yet, apart from Vimeo when someone plays a video. To add analytics, advertising or similar later, mark the script so it only loads after consent: `<script type="text/plain" data-consent="statistics" src="..."></script>` (use `statistics`, `marketing` or `preferences`). Have your legal contact review the banner wording. The cookie page lists `www.squariclegroup.com` as the domain the consent applies to, and its text is copied from the ted Learning site (including its opening paragraph about ted Learning and the "ted Learning use technologies" line), so review it and the cookie categories against what the live site really sets.
 4. **Privacy notice.** This is the complete September 2026 notice supplied by the client. The only change is the opening line, which now names `www.squariclegroup.com` instead of listing the group's other sites. Have the document owner confirm that is what they want.
@@ -130,4 +129,4 @@ What the webhook receives (as a JSON body by default): `form` (which form), `for
 
 ## Accessibility
 
-Real buttons and links throughout, a skip link, visible focus, labelled form fields, alt text on images, and text colours that pass WCAG AA contrast. The hero video starts muted, has a pause button, and does not play for visitors who ask their device for reduced motion.
+Real buttons and links throughout, a skip link, visible focus, labelled form fields, alt text on images, and text colours that pass WCAG AA contrast. The hero background video is muted, decorative, hidden from screen readers, and does not load for visitors who ask their device for reduced motion.

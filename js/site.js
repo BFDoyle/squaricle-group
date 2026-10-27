@@ -28,25 +28,28 @@
     });
   }
 
-  /* Hero video: pause / play, and respect reduced motion */
-  var video = document.getElementById('hero-video');
-  var toggle = document.getElementById('video-toggle');
-  if (video && toggle) {
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var setState = function (playing) {
-      if (playing) {
-        video.hidden = false;
-        var p = video.play();
-        if (p && p.catch) { p.catch(function () {}); }
-      } else {
-        video.pause();
-        video.hidden = true;
-      }
-      toggle.setAttribute('aria-pressed', playing ? 'false' : 'true');
-      toggle.textContent = playing ? 'Pause video' : 'Play video';
+  /* Hero background video (Vimeo). It is only loaded once the page has finished loading, and not at all for
+     visitors who ask their device for reduced motion (they keep the still photo). The video fades in when
+     Vimeo reports that it is playing, so there is no black flash over the photo. */
+  var hero = document.getElementById('hero-video');
+  if (hero && hero.getAttribute('data-src') &&
+      !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    var show = function () { hero.classList.add('is-playing'); };
+    var loadHero = function () {
+      window.addEventListener('message', function (e) {
+        if (e.origin !== 'https://player.vimeo.com' || e.source !== hero.contentWindow) { return; }
+        var m = e.data;
+        if (typeof m === 'string') { try { m = JSON.parse(m); } catch (err) { return; } }
+        if (m && (m.event === 'play' || m.event === 'playing' || m.event === 'timeupdate')) { show(); }
+      });
+      hero.addEventListener('load', function () {
+        ['play', 'playing'].forEach(function (name) {
+          hero.contentWindow.postMessage(JSON.stringify({ method: 'addEventListener', value: name }), 'https://player.vimeo.com');
+        });
+      });
+      hero.src = hero.getAttribute('data-src');
     };
-    if (reduce) { setState(false); }
-    toggle.addEventListener('click', function () { setState(video.hidden); });
+    if (document.readyState === 'complete') { loadHero(); } else { window.addEventListener('load', loadHero); }
   }
 
   /* Project filter */

@@ -204,8 +204,25 @@ header { position: relative; z-index: 30; }
   .marquee-item[aria-hidden="true"] { display: none; }
 }
 
-/* Hero video */
-.herovid[hidden] { display: none; }
+/* Hero background video (Vimeo "background" player, loaded by js/site.js). It fills the hero like a cover image:
+   the 16:9 frame is scaled up until it covers the whole box, and fades in once it is playing. */
+.herovid-box { container-type: size; }
+.herovid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: max(100%, 177.78vh);
+  height: max(100%, 56.25vw);
+  border: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.8s ease;
+}
+@supports (width: 1cqw) {
+  .herovid { width: max(100cqw, 177.78cqh); height: max(100cqh, 56.25cqw); }
+}
+.herovid.is-playing { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .herovid { display: none; }

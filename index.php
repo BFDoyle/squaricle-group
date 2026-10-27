@@ -9,9 +9,9 @@ require __DIR__ . '/inc/header.php';
 ?>
 
 <section class="dk" style="position:relative;background:#1b2a24;min-height:900px;display:flex;flex-direction:column">
-<div style="position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden">
+<div class="herovid-box" style="position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden">
 <img src="assets/img/project-skills-funding-agency.jpg" alt="" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
-<video class="herovid" id="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/project-skills-funding-agency.jpg" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover"><source src="assets/video/hero-loop.mp4" type="video/mp4"></video>
+<iframe class="herovid" id="hero-video" data-src="https://player.vimeo.com/video/540550693?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;dnt=1" title="" aria-hidden="true" tabindex="-1" allow="autoplay; fullscreen" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(27,42,36,0.78)"></div>
 </div>
 <div class="wrap" style="position:relative;z-index:2;width:100%;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-top:150px;padding-bottom:88px">
@@ -23,9 +23,6 @@ require __DIR__ . '/inc/header.php';
 <a class="btn btn-s" href="#contact">Talk to the Squaricle Group</a>
 <a class="btn btn-g" href="#brands">Meet our brands</a>
 </div>
-</div>
-<div style="display:flex;justify-content:flex-end">
-<button type="button" class="btn btn-g" id="video-toggle" aria-pressed="false">Pause video</button>
 </div>
 </div>
 </div>
